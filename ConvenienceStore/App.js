@@ -1,24 +1,15 @@
 import React from 'react';
-import {Text, View, ImageBackground, Image} from 'react-native';
-import AppStyles from './src/assets/styles/AppStyles';
-import {image, home} from './src/assets/images/Images';
+import {StatusBar} from 'react-native';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store/store';
+import Navigation from './src/routing/Navigation';
 
 const App = () => {
   return (
-    <View style={AppStyles.container}>
-      <ImageBackground source={image} style={AppStyles.image}>
-        <View style={AppStyles.transparent}>
-          <View style={AppStyles.itemsContainer}>
-            <View>
-              <Text style={AppStyles.vegezone}>Vegezone</Text>
-              <Text>{''}</Text>
-              <Image source={home} style={AppStyles.ellipse} />
-            </View>
-            <Text style={AppStyles.text}>Let's shop</Text>
-          </View>
-        </View>
-      </ImageBackground>
-    </View>
+    <Provider store={store}>
+      <StatusBar hidden />
+      <Navigation />
+    </Provider>
   );
 };
 
