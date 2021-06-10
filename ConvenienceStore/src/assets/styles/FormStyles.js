@@ -13,6 +13,16 @@ const FormStyles = StyleSheet.create({
     borderBottomRightRadius: 40,
     borderBottomLeftRadius: 40,
   },
+  viewFrontgroundBottom: {
+    bottom: 0,
+    left: 0,
+    width: windowWidth,
+    height: windowHeight * 0.85,
+    position: 'absolute',
+    backgroundColor: WHITE,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+  },
   containerText: {
     flex: 1,
     justifyContent: 'space-between',

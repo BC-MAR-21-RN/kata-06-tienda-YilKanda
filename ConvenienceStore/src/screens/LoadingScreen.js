@@ -1,14 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {
-  TouchableOpacity,
-  View,
-  ImageBackground,
-  Image,
-  Text,
-} from 'react-native';
+import {TouchableOpacity, View, Image, Text} from 'react-native';
 import auth from '@react-native-firebase/auth';
+import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
 import AppStyles from '../assets/styles/AppStyles';
-import {image, home} from '../assets/images/Images';
+import {home} from '../assets/images/Images';
 
 const LoadingScreen = ({navigation}) => {
   const [initializing, setInitializing] = useState(true);
@@ -31,22 +26,18 @@ const LoadingScreen = ({navigation}) => {
   };
 
   return (
-    <View style={AppStyles.container}>
-      <ImageBackground source={image} style={AppStyles.image}>
-        <View style={AppStyles.transparent}>
-          <View style={AppStyles.itemsContainer}>
-            <View>
-              <Text style={AppStyles.vegezone}>Vegezone</Text>
-              <Text>{''}</Text>
-              <Image source={home} style={AppStyles.ellipse} />
-            </View>
-            <TouchableOpacity onPress={() => handleClick()}>
-              <Text style={AppStyles.text}>Let's shop</Text>
-            </TouchableOpacity>
-          </View>
+    <BackgroundImageOpacity>
+      <View style={AppStyles.itemsContainer}>
+        <View>
+          <Text style={AppStyles.vegezone}>Vegezone</Text>
+          <Text>{''}</Text>
+          <Image source={home} style={AppStyles.ellipse} />
         </View>
-      </ImageBackground>
-    </View>
+        <TouchableOpacity onPress={() => handleClick()}>
+          <Text style={AppStyles.text}>Let's shop</Text>
+        </TouchableOpacity>
+      </View>
+    </BackgroundImageOpacity>
   );
 };
 
