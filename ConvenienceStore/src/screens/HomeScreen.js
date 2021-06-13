@@ -5,6 +5,7 @@ import {logout} from '../redux/actions/userActions';
 import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
 import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
 import Header from '../components/Header';
+import HomeStyles from '../assets/styles/HomeStyles';
 
 const HomeScreen = ({navigation}) => {
   const dispatch = useDispatch();
@@ -21,19 +22,17 @@ const HomeScreen = ({navigation}) => {
   return (
     <BackgroundImageOpacity>
       <BackgroundWhiteBottom />
-      <View style={{justifyContent: 'space-between', height: 600}}>
+      <View style={HomeStyles.container}>
         <Header />
         <FlatList
           data={dataSource}
           renderItem={({item}) => (
-            <View style={{flex: 1, flexDirection: 'column', margin: 1}}>
+            <View style={HomeStyles.item}>
               <Image
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  height: 100,
+                style={HomeStyles.image}
+                source={{
+                  uri: 'https://img1.picmix.com/output/stamp/normal/7/0/0/6/1936007_bcd99.png',
                 }}
-                source={{uri: 'https://img1.picmix.com/output/stamp/normal/7/0/0/6/1936007_bcd99.png'}}
               />
               <Text>{item.id + 1}</Text>
             </View>
@@ -41,7 +40,7 @@ const HomeScreen = ({navigation}) => {
           //Setting the number of column
           numColumns={3}
           keyExtractor={(item, index) => index}
-          style={{margin: 45}}
+          style={HomeStyles.flatlist}
         />
         <TouchableOpacity onPress={() => dispatch(logout())}>
           <Text>Logout</Text>
