@@ -1,15 +1,11 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, Text, FlatList, Image} from 'react-native';
-import {useDispatch} from 'react-redux';
-import {logout} from '../redux/actions/userActions';
+import {View, Text, FlatList, Image} from 'react-native';
 import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
 import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
 import Header from '../components/Header';
 import HomeStyles from '../assets/styles/HomeStyles';
 
 const HomeScreen = ({navigation}) => {
-  const dispatch = useDispatch();
-
   const [dataSource, setDataSource] = useState([]);
 
   useState(() => {
@@ -23,7 +19,7 @@ const HomeScreen = ({navigation}) => {
     <BackgroundImageOpacity>
       <BackgroundWhiteBottom />
       <View style={HomeStyles.container}>
-        <Header />
+        <Header navigation={navigation} name={'HOME'} />
         <FlatList
           data={dataSource}
           renderItem={({item}) => (
@@ -42,9 +38,6 @@ const HomeScreen = ({navigation}) => {
           keyExtractor={(item, index) => index}
           style={HomeStyles.flatlist}
         />
-        <TouchableOpacity onPress={() => dispatch(logout())}>
-          <Text>Logout</Text>
-        </TouchableOpacity>
       </View>
     </BackgroundImageOpacity>
   );

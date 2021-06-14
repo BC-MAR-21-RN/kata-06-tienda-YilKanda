@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import LoadingScreen from '../screens/LoadingScreen';
 import AuthStack from './AuthStack';
-import AppStack from './AppStack';
+import AppDrawer from './AppStack';
 
 const RootStack = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ const RootStack = () => {
 
   return (
     <NavigationContainer>
-      {isLoading ? <LoadingScreen /> : user ? <AppStack /> : <AuthStack />}
+      {isLoading ? <LoadingScreen /> : user ? <AppDrawer /> : <AuthStack />}
     </NavigationContainer>
   );
 };

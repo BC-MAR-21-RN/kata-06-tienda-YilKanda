@@ -1,20 +1,25 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import {DrawerActions} from '@react-navigation/native';
 import {ZIRCON} from '../assets/colors/Color';
 import CrossPlatformIcon from 'react-native-cross-platform-icons';
 
-const Header = props => {
+const Header = ({navigation, name}) => {
   return (
-    <View style={[styles.container, props.style]}>
-      <TouchableOpacity style={styles.leftIconButton}>
+    <View style={[styles.container]}>
+      <TouchableOpacity
+        style={styles.leftIconButton}
+        onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
         <CrossPlatformIcon name={'menu'} size={30} color={ZIRCON} />
       </TouchableOpacity>
       <View style={styles.textWrapper}>
         <Text numberOfLines={1} style={styles.title}>
-          HOME
+          {name}
         </Text>
       </View>
-      <TouchableOpacity style={styles.rightIconButton}>
+      <TouchableOpacity
+        style={styles.rightIconButton}
+        onPress={() => navigation.navigate('Cart')}>
         <CrossPlatformIcon name={'cart'} size={30} color={ZIRCON} />
       </TouchableOpacity>
     </View>
