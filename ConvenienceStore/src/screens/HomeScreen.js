@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {View, Text, FlatList, Image} from 'react-native';
+import {View, FlatList} from 'react-native';
 import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
 import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
 import Header from '../components/Header';
 import HomeStyles from '../assets/styles/HomeStyles';
+import ItemProduct from '../components/ItemProduct';
 
 const HomeScreen = ({navigation}) => {
   const [dataSource, setDataSource] = useState([]);
@@ -19,21 +20,10 @@ const HomeScreen = ({navigation}) => {
     <BackgroundImageOpacity>
       <BackgroundWhiteBottom />
       <View style={HomeStyles.container}>
-        <Header navigation={navigation} name={'HOME'} />
+        <Header navigation={navigation} name={'Home'} />
         <FlatList
           data={dataSource}
-          renderItem={({item}) => (
-            <View style={HomeStyles.item}>
-              <Image
-                style={HomeStyles.image}
-                source={{
-                  uri: 'https://img1.picmix.com/output/stamp/normal/7/0/0/6/1936007_bcd99.png',
-                }}
-              />
-              <Text>{item.id + 1}</Text>
-            </View>
-          )}
-          //Setting the number of column
+          renderItem={({item}) => <ItemProduct style={HomeStyles.item} />}
           numColumns={3}
           keyExtractor={(item, index) => index}
           style={HomeStyles.flatlist}

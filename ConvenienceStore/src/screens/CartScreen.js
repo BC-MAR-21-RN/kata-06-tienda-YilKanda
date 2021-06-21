@@ -1,13 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
+import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
+import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
 import Header from '../components/Header';
+import HomeStyles from '../assets/styles/HomeStyles';
+import ItemCart from '../components/ItemCart';
 
 const CartScreen = ({navigation}) => {
   return (
-    <View>
-      <Header navigation={navigation} name={'CART'} />
-      <Text>Cart</Text>
-    </View>
+    <BackgroundImageOpacity>
+      <BackgroundWhiteBottom />
+      <View style={HomeStyles.container}>
+        <Header navigation={navigation} name={'My Order'} />
+        <ItemCart />
+      </View>
+    </BackgroundImageOpacity>
   );
 };
 

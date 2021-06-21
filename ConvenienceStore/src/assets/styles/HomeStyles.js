@@ -11,7 +11,7 @@ const HomeStyles = StyleSheet.create({
   item: {
     flex: 1,
     flexDirection: 'column',
-    margin: 1,
+    marginBottom: 10,
   },
   image: {
     justifyContent: 'center',
