@@ -1,14 +1,17 @@
 import React from 'react';
 import {View, ImageBackground, Text, TouchableOpacity} from 'react-native';
+import {useDispatch} from 'react-redux';
 import Svg, {Ellipse} from 'react-native-svg';
 import {CELERY} from '../assets/colors/Color';
 import ItemProductStyles from '../assets/styles/ItemProductStyles';
+import {addItemToCart} from '../redux/actions/cartActions';
 
 const ItemProduct = props => {
+  const dispatch = useDispatch();
   return (
     <View style={[ItemProductStyles.container, props.style]}>
       <ImageBackground
-        source={require('../assets/images/product.png')}
+        source={{uri: props.item.img}}
         resizeMode="contain"
         style={ItemProductStyles.imgProduct}
         imageStyle={ItemProductStyles.imgProduct_imageStyle}>
@@ -23,14 +26,18 @@ const ItemProduct = props => {
               ry={13}
             />
             <View style={ItemProductStyles.sizeTextContainer}>
-              <Text style={ItemProductStyles.sizeText}>1Kg</Text>
+              <Text style={ItemProductStyles.sizeText}>
+                {props.item.amount}
+              </Text>
             </View>
           </Svg>
         </View>
       </ImageBackground>
-      <Text style={ItemProductStyles.txtProduct}>Argan</Text>
-      <Text style={ItemProductStyles.txtPrice}>$10</Text>
-      <TouchableOpacity style={ItemProductStyles.btnAddCart}>
+      <Text style={ItemProductStyles.txtProduct}>{props.item.name}</Text>
+      <Text style={ItemProductStyles.txtPrice}>{props.item.price}</Text>
+      <TouchableOpacity
+        style={ItemProductStyles.btnAddCart}
+        onPress={() => dispatch(addItemToCart(props.item))}>
         <Text style={ItemProductStyles.txtAddToCart}>Add to Cart</Text>
       </TouchableOpacity>
     </View>

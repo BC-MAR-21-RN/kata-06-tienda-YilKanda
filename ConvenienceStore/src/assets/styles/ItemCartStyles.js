@@ -58,6 +58,13 @@ const ItemCartStyles = StyleSheet.create({
   margin50: {
     marginLeft: 50,
   },
+  emptyCartContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyCartMessage: {
+    fontSize: 28,
+  },
 });
 
 export default ItemCartStyles;
