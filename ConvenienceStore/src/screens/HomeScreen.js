@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, TouchableOpacity} from 'react-native';
 import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
 import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
 import Header from '../components/Header';
@@ -16,7 +16,14 @@ const HomeScreen = ({navigation}) => {
         <FlatList
           data={products}
           renderItem={({item}) => (
-            <ItemProduct style={HomeStyles.item} item={item} />
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate('Details', {
+                  item: item,
+                })
+              }>
+              <ItemProduct style={HomeStyles.item} item={item} />
+            </TouchableOpacity>
           )}
           numColumns={3}
           keyExtractor={item => item.id.toString()}

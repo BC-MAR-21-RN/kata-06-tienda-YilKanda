@@ -7,6 +7,7 @@ import CrossPlatformIcon from 'react-native-cross-platform-icons';
 import HomeScreen from '../screens/HomeScreen';
 import LogOutScreen from '../screens/LogOutScreen';
 import CartScreen from '../screens/CartScreen';
+import DetailsScreen from '../screens/DetailsScreen';
 
 import DrawerStyles from '../assets/styles/DrawerStyles';
 import {ZIRCON, WHITE} from '../assets/colors/Color';
@@ -16,6 +17,7 @@ const AppStack = () => {
   return (
     <Stack.Navigator initialRouteName="Home" headerMode="none">
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Details" component={DetailsScreen} />
     </Stack.Navigator>
   );
 };
@@ -40,7 +42,7 @@ const AppTab = () => {
           );
         },
       })}>
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home" component={AppStack} />
       <Tab.Screen name="Cart" component={CartScreen} />
     </Tab.Navigator>
   );
