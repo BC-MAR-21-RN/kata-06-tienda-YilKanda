@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LogOutScreen from '../screens/LogOutScreen';
 import CartScreen from '../screens/CartScreen';
 import DetailsScreen from '../screens/DetailsScreen';
+import YourOrdersScreen from '../screens/YourOrdersScreen';
 
 import DrawerStyles from '../assets/styles/DrawerStyles';
 import {ZIRCON, WHITE} from '../assets/colors/Color';
@@ -35,6 +36,8 @@ const AppTab = () => {
             iconName = 'home';
           } else if (route.name === 'Cart') {
             iconName = 'cart';
+          } else if (route.name === 'Your Orders') {
+            iconName = 'albums';
           }
 
           return (
@@ -44,6 +47,7 @@ const AppTab = () => {
       })}>
       <Tab.Screen name="Home" component={AppStack} />
       <Tab.Screen name="Cart" component={CartScreen} />
+      <Tab.Screen name="Your Orders" component={YourOrdersScreen} />
     </Tab.Navigator>
   );
 };
@@ -59,6 +63,7 @@ export const AppDrawer = () => {
         inactiveTintColor: WHITE,
       }}>
       <Drawer.Screen name="Home" component={AppTab} />
+      <Drawer.Screen name="Your Orders" component={YourOrdersScreen} />
       <Drawer.Screen name="Logout" component={LogOutScreen} />
     </Drawer.Navigator>
   );
