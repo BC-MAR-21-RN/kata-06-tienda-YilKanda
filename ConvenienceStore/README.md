@@ -1,6 +1,9 @@
-# ConvenienceStore
+# Convenience Store
 
-This is an example of a Convenience Store app, through React Native.
+[![Code Climate](https://codeclimate.com/github/BC-MAR-21-RN/kata-06-tienda-YilKanda.png)](https://codeclimate.com/github/BC-MAR-21-RN/kata-06-tienda-YilKanda)
+[![DeepScan grade](https://deepscan.io/api/teams/13572/projects/17687/branches/412882/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=13572&pid=17687&bid=412882)
+
+Convenience Store is an application that will allow users to buy products that are displayed in a catalog on the main screen of this.
 
 ## Setup
 
