@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "696640728131",
+    "project_id": "conveniencestore-7b1c0",
+    "storage_bucket": "conveniencestore-7b1c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696640728131:android:d3fa0d61d68fe71276f8f6",
+        "android_client_info": {
+          "package_name": "com.conveniencestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696640728131-39re2407bpf285trc0g78i7ksmcja214.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.conveniencestore",
+            "certificate_hash": "05f90ab1783e5db03b8c4a028220757dc0c5d509"
+          }
+        },
+        {
+          "client_id": "696640728131-icbdca47vln5d80hr4rbhtroosaman0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQViqltXmTcx4a0wlLI_Lgp2qZBucYWE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696640728131-icbdca47vln5d80hr4rbhtroosaman0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
