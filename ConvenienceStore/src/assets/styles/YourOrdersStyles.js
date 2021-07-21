@@ -7,6 +7,7 @@ const YourOrdersStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginTop: 10,
   },
   vwBackgroundOrder: {
     width: windowWidth * 0.85,
@@ -48,11 +49,11 @@ const YourOrdersStyles = StyleSheet.create({
   name: {
     fontFamily: 'roboto-regular',
     color: 'rgba(155,155,155,1)',
+    width: windowWidth * 0.4,
   },
   amount: {
     fontFamily: 'roboto-regular',
     color: 'rgba(155,155,155,1)',
-    textAlign: 'right',
   },
   price: {
     fontFamily: 'roboto-regular',

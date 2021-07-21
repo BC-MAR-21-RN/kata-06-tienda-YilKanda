@@ -8,3 +8,4 @@ export const DOVE_GRAY = '#666666';
 export const BLACK = '#000000';
 export const CASPER = '#B1C4D5';
 export const BOTTICELLI = '#CCD9E4';
+export const BURNT_SIENNA = '#EC5F64';

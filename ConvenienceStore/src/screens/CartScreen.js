@@ -2,7 +2,8 @@ import React from 'react';
 import {View, FlatList, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import BackgroundImageOpacity from '../components/BackgroundImageOpacity';
-import BackgroundWhiteBottom from '../components/BackgroundWhiteBottom';
+import BackgroundWhiteCart from '../components/BackgroundWhiteCart';
+import FormCheckout from '../components/FormCheckout';
 import Header from '../components/Header';
 import HomeStyles from '../assets/styles/HomeStyles';
 import ItemCart from '../components/ItemCart';
@@ -12,9 +13,10 @@ const CartScreen = ({navigation}) => {
   const cartItems = useSelector(state => state.cartItemsReducer);
   return (
     <BackgroundImageOpacity>
-      <BackgroundWhiteBottom />
+      <BackgroundWhiteCart />
       <View style={HomeStyles.container}>
         <Header navigation={navigation} name={'My Order'} />
+        <FormCheckout />
         {cartItems.lenght !== 0 ? (
           <FlatList
             data={cartItems}

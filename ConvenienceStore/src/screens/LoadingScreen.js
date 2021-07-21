@@ -8,7 +8,7 @@ const LoadingScreen = ({navigation}) => {
     <BackgroundImageOpacity>
       <View style={AppStyles.itemsContainer}>
         <View>
-          <Text style={AppStyles.vegezone}>Vegezone</Text>
+          <Text style={AppStyles.vegezone}>Pokémon Store</Text>
           <Text>{''}</Text>
           <Image
             source={require('../assets/images/home.png')}

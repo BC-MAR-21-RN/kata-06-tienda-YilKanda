@@ -7,6 +7,7 @@ const DetailsStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginTop: 10,
   },
   vwBackImage: {
     height: windowWidth * 0.85,

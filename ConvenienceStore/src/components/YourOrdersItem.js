@@ -8,7 +8,7 @@ import {
   Text,
 } from 'react-native';
 import CrossPlatformIcon from 'react-native-cross-platform-icons';
-import {KEPPEL, CASPER} from '../assets/colors/Color';
+import {KEPPEL, CASPER, BURNT_SIENNA} from '../assets/colors/Color';
 import YourOrdersStyles from '../assets/styles/YourOrdersStyles';
 
 const YourOrdersItem = ({item}) => {
@@ -54,19 +54,23 @@ const YourOrdersItem = ({item}) => {
           <View style={YourOrdersStyles.deliveryRow}>
             <View />
             <Text style={YourOrdersStyles.delivery}>Delivery</Text>
-            <Text style={YourOrdersStyles.deliveryPrice}>$4.99</Text>
+            <Text style={YourOrdersStyles.deliveryPrice}>
+              ${item.item.delivery}
+            </Text>
           </View>
           <View style={YourOrdersStyles.isShipped}>
             <View style={YourOrdersStyles.iconShippedRow}>
               <CrossPlatformIcon
-                name={'checkmark-circle'}
+                name={item.item.shipped ? 'checkmark-circle' : 'close-circle'}
                 size={20}
-                color={KEPPEL}
+                color={item.item.shipped ? KEPPEL : BURNT_SIENNA}
               />
-              <Text style={YourOrdersStyles.shipped}>Shipped</Text>
+              <Text style={YourOrdersStyles.shipped}>
+                {item.item.shipped ? 'Shipped' : 'Without Shipping'}
+              </Text>
             </View>
             <Text style={YourOrdersStyles.total}>Total</Text>
-            <Text style={YourOrdersStyles.totalAmount}>$14.29</Text>
+            <Text style={YourOrdersStyles.totalAmount}>${item.item.total}</Text>
           </View>
         </View>
       )}

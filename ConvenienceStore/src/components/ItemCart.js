@@ -34,7 +34,7 @@ const ItemCart = props => {
                 color={CASPER}
               />
             </TouchableOpacity>
-            <Text style={ItemCartStyles.lblSizeAdd}>{props.item.amount}</Text>
+            <Text style={ItemCartStyles.lblSizeAdd}>1</Text>
             <TouchableOpacity>
               <CrossPlatformIcon
                 name={'add-circle-outline'}

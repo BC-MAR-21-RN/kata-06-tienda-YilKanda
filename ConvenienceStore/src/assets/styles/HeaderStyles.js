@@ -4,7 +4,7 @@ import {ZIRCON, CELERY} from '../colors/Color';
 const HeaderStyles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    marginTop: 10,
+    marginVertical: 20,
   },
   leftIconButton: {
     flex: 1,
