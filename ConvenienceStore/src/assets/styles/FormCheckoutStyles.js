@@ -3,7 +3,7 @@ import {windowWidth} from '../utils/Dimensions';
 
 const FormCheckoutStyles = StyleSheet.create({
   vwCheckout: {
-    width: windowWidth*0.9,
+    width: windowWidth * 0.9,
     height: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',

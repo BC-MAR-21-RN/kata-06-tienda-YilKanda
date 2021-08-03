@@ -17,7 +17,7 @@ const FormStyles = StyleSheet.create({
     bottom: 0,
     left: 0,
     width: windowWidth,
-    height: windowHeight * 0.80,
+    height: windowHeight * 0.8,
     position: 'absolute',
     backgroundColor: WHITE,
     borderTopLeftRadius: 40,

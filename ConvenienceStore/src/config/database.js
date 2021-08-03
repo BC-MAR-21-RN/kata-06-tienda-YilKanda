@@ -85,7 +85,8 @@ export const products = [
     name: 'Pase de Incursión Remota',
     amount: '1',
     price: 100,
-    description: 'Con un pase de incursión remota, los Entrenadores podrán participar en las incursiones que aparezcan en la pantalla Cerca o que puedan tocar en la Vista del mapa.',
+    description:
+      'Con un pase de incursión remota, los Entrenadores podrán participar en las incursiones que aparezcan en la pantalla Cerca o que puedan tocar en la Vista del mapa.',
     img: 'https://d2duuy9yo5pldo.cloudfront.net/niantic/78c2db98-639a-41fb-b19e-ef88b8e04b94-2t.png',
   },
   {
@@ -93,7 +94,8 @@ export const products = [
     name: 'Pokocho',
     amount: '1',
     price: 100,
-    description: 'Dáselo a tu compañero para que te acompañe durante un periodo determinado (hasta que se acabe su efecto) a lo largo del mapa.',
+    description:
+      'Dáselo a tu compañero para que te acompañe durante un periodo determinado (hasta que se acabe su efecto) a lo largo del mapa.',
     img: 'https://d2duuy9yo5pldo.cloudfront.net/niantic/f958ee9d-e89e-414d-a362-e45c193be3b9-2t.png',
   },
   {
@@ -101,7 +103,8 @@ export const products = [
     name: 'Revivir',
     amount: '20',
     price: 100,
-    description: 'Revive a un Pokémon que esté debilitado y recupera la mitad del total de sus puntos de salud',
+    description:
+      'Revive a un Pokémon que esté debilitado y recupera la mitad del total de sus puntos de salud',
     img: 'https://i.pinimg.com/originals/2a/49/b0/2a49b0bc9379f765bf065dd6cfab2c44.png',
   },
 ];
